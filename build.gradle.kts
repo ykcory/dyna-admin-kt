@@ -34,6 +34,8 @@ dependencies {
     implementation("cn.hutool:hutool-jwt:5.8.23")
     implementation("org.springframework.boot:spring-boot-starter-data-redis:3.2.0")
     implementation("com.alibaba.fastjson2:fastjson2-kotlin:2.0.43")
+    implementation("io.minio:minio:8.5.7")
+    implementation("cn.hutool:hutool-core:5.8.23")
 }
 
 tasks.withType<KotlinCompile> {

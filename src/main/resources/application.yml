@@ -19,3 +19,9 @@ spring:
 mybatis:
   mapper-locations: classpath:mapper/setting/*.xml
   type-aliases-package: com.dyna.modules.setting.entity
+
+minio:
+  endpoint: http://192.168.31.81:9002
+  bucket-name: dyna
+  access-key: dyna
+  secret-key: relhreckdlsr
