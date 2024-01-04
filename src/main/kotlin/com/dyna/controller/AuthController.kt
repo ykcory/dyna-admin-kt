@@ -2,7 +2,7 @@ package com.dyna.controller
 
 import com.dyna.domain.entity.R
 import com.dyna.domain.entity.Response
-import com.dyna.domain.dto.LoginParams
+import com.dyna.domain.dto.LoginDto
 import com.dyna.service.impl.AuthServiceImpl
 import io.swagger.v3.oas.annotations.Operation
 import io.swagger.v3.oas.annotations.tags.Tag
@@ -20,7 +20,7 @@ class AuthController(
 ) {
     @Operation(summary = "登录")
     @PostMapping("/login")
-    fun login(@RequestBody params: LoginParams): Response<String> {
+    fun login(@RequestBody params: LoginDto): Response<String> {
         return R.success(authService.login(params))
     }
 

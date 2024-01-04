@@ -1,6 +1,6 @@
 package com.dyna.config
 
-import com.dyna.fliter.JwtAuthenticationFilter
+import com.dyna.fliters.JwtAuthenticationFilter
 import com.dyna.service.AuthUserDetailsService
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration

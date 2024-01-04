@@ -17,7 +17,7 @@ spring:
       database: 0
 
 mybatis:
-  mapper-locations: classpath:mapper/setting/*.xml
+  mapper-locations: classpath:mapper/setting/**/*.xml
   type-aliases-package: com.dyna.modules.setting.entity
 
 minio:

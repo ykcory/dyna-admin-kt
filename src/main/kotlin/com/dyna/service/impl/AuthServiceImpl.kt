@@ -2,7 +2,7 @@ package com.dyna.service.impl
 
 import cn.hutool.jwt.signers.JWTSigner
 import cn.hutool.jwt.signers.JWTSignerUtil
-import com.dyna.domain.dto.LoginParams
+import com.dyna.domain.dto.LoginDto
 import com.dyna.modules.setting.domain.entity.User
 import com.dyna.service.AuthService
 import com.dyna.utils.TokenUtil
@@ -22,7 +22,7 @@ class AuthServiceImpl(
     private final val tokenSecret = "sifhrevhwvnkjsfihre".toByteArray()
     val signer: JWTSigner = JWTSignerUtil.hs256(tokenSecret)
 
-    override fun login(params: LoginParams): String {
+    override fun login(params: LoginDto): String {
         val authentication = UsernamePasswordAuthenticationToken(params.username, params.password)
         // 此时会调用 loadUserByUsername 方法 返回的是 UserDetails
         val authenticate: Authentication?

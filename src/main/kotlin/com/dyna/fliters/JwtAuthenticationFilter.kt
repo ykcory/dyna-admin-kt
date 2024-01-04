@@ -1,6 +1,7 @@
-package com.dyna.fliter
+package com.dyna.fliters
 
 import com.alibaba.fastjson2.JSONObject
+import com.alibaba.fastjson2.to
 import com.dyna.modules.setting.domain.entity.User
 import com.dyna.utils.TokenUtil
 import jakarta.servlet.FilterChain
@@ -32,7 +33,7 @@ class JwtAuthenticationFilter(
         }
         // redis 获取 userinfo
         val userJson = redisTemplate.opsForValue().get(TokenUtil.getUsername(token)) as JSONObject
-        val userInfo = userJson.toJavaObject(User::class.java)
+        val userInfo = userJson.to<User>()
         val authentication =
             UsernamePasswordAuthenticationToken(userInfo, null, userInfo.authorities)
         SecurityContextHolder.getContext().authentication = authentication

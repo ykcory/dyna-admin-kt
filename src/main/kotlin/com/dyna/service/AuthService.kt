@@ -1,7 +1,7 @@
 package com.dyna.service
 
-import com.dyna.domain.dto.LoginParams
+import com.dyna.domain.dto.LoginDto
 
 interface AuthService {
-    fun login(params: LoginParams): String
+    fun login(params: LoginDto): String
 }

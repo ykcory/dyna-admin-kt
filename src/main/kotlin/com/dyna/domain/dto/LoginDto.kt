@@ -1,6 +1,6 @@
 package com.dyna.domain.dto
 
-data class LoginParams (
+data class LoginDto (
     val username: String,
     val password: String
 )
